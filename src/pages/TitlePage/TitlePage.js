@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import './style.css';
 
 const TitlePage = () => {
@@ -7,6 +7,7 @@ const TitlePage = () => {
         <div className='title-block'>
             <Helmet>
                 <title>О тайтле</title>
+                <meta name="description" content="Some information about my project" />
             </Helmet>
             <h1 className='title-tag'>О тайтле</h1>
             <p className='abzats-block'>

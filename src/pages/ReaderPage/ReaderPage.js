@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import chaptersData from '../../data/chapters.json';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import './style.css'; // Импортируем CSS файл для стилей
 
 const ChapterPage = () => {
@@ -64,6 +64,7 @@ const ChapterPage = () => {
     <div className="chapter-container">
       <Helmet>
         <title>{`Глава ${chapterId} страница ${currentPage}`}</title>
+        <meta name="description" content="Page that user is reading" />
       </Helmet>
       <img src={pages[currentPage - 1]} alt={`Page ${currentPage}`} className="chapter-image" />
       <div className="navigation-buttons">

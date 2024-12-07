@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import './style.css'
 
 const Home = () => {
@@ -30,6 +30,7 @@ const Home = () => {
     <div className="home-container">
       <Helmet>
         <title>Главная</title>
+        <meta name="description" content="The main page of my application" />
       </Helmet>
       <div className="hero-section">
         <h1 className="hero-title">ИНФОРМАЦИОННЫЙ МИР</h1>

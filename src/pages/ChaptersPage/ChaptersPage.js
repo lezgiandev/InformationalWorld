@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import './style.css';
 
 const Chapters = () => {
@@ -8,6 +8,7 @@ const Chapters = () => {
     <div className='chapters-container'>
       <Helmet>
         <title>Главы</title>
+        <meta name="description" content="List of chapters of my project" />
       </Helmet>
       <h2 className='chapters-title'>Главы</h2>
       <div className='chapters-list'>
