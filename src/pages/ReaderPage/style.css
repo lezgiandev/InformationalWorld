@@ -1,0 +1,70 @@
+.chapter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem;
+    min-height: calc(100vh - 60px);
+}
+
+.chapter-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+    /* Ограничиваем ширину кнопок */
+    margin-top: 1rem;
+}
+
+.nav-button {
+    background-color: #27b0ff;
+    color: #333;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+    /* Кнопки занимают равное пространство */
+    margin: 0 0.5rem;
+    /* Отступ между кнопками */
+}
+
+.nav-button:hover {
+    background-color: #1b77ac;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(7, 46, 83, 0.3);
+}
+
+.nav-button:active {
+    transform: translateY(0);
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+    .nav-button {
+        font-size: 1rem;
+        /* Уменьшаем размер шрифта на мобильных устройствах */
+        padding: 0.8rem 1.5rem;
+        /* Уменьшаем отступы */
+    }
+}
+
+@media (max-width: 480px) {
+    .chapter-container {
+        padding: 4rem 1rem;
+        /* Уменьшаем отступы на маленьких экранах */
+    }
+
+    .nav-button {
+        font-size: 0.9rem;
+        /* Уменьшаем размер шрифта еще больше */
+    }
+}
